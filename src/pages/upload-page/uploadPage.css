@@ -1,0 +1,218 @@
+@font-face {
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+}
+.upload__heading {
+  font-family: "Avenir Next", Arial, sans-serif;
+  font-weight: 700;
+  color: #323232;
+  font-size: 2.2rem;
+}
+@media (min-width: 768px) {
+  .upload__heading {
+    font-size: 2.4rem;
+  }
+}
+@media (min-width: 768px) {
+  .upload__heading {
+    font-size: 2.1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .upload__video-details {
+    width: 61%;
+    margin-left: 2rem;
+  }
+}
+.upload__outer-wrapper {
+  border-top: 0.15rem solid #e1e1e1;
+  margin-top: 1rem;
+}
+.upload__items-wrapper {
+  width: 90%;
+}
+@media (min-width: 768px) {
+  .upload__items-wrapper {
+    padding-bottom: 3rem;
+  }
+}
+.upload__thumbnail {
+  width: 100%;
+  border-radius: 0.25rem;
+  background-color: #e1e1e1;
+}
+@media (min-width: 768px) {
+  .upload__thumbnail {
+    width: 45%;
+  }
+}
+@media (min-width: 1280px) {
+  .upload__thumbnail {
+    height: 33vh;
+    width: 100%;
+  }
+}
+.upload__outer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.upload__input-heading {
+  font-family: "Avenir Next", Arial, sans-serif;
+  font-weight: 700;
+  color: #afafaf;
+  text-transform: uppercase;
+  line-height: 1rem;
+}
+.upload__video-title {
+  padding: 0.9rem;
+  width: 100%;
+  height: 3.5rem;
+  border-radius: 0.25rem;
+  border: 0.15rem solid #e1e1e1;
+  background-color: #fafafa;
+}
+.upload__video-title:focus {
+  outline-color: #0095ff;
+}
+@media (min-width: 1280px) {
+  .upload__video-title {
+    height: 3rem;
+  }
+}
+.upload__video-title::-moz-placeholder {
+  font-family: "Avenir Next", Arial, sans-serif;
+  font-weight: 400;
+  color: #323232;
+  font-size: 1.2rem;
+}
+.upload__video-title::placeholder {
+  font-family: "Avenir Next", Arial, sans-serif;
+  font-weight: 400;
+  color: #323232;
+  font-size: 1.2rem;
+}
+@media (min-width: 1280px) {
+  .upload__video-title::-moz-placeholder {
+    font-size: 1rem;
+  }
+  .upload__video-title::placeholder {
+    font-size: 1rem;
+  }
+}
+.upload__video-description {
+  padding: 0.9rem;
+  resize: none;
+  width: 100%;
+  height: 10rem;
+  border-radius: 0.25rem;
+  border: 0.15rem solid #e1e1e1;
+  background-color: #fafafa;
+}
+@media (min-width: 1280px) {
+  .upload__video-description {
+    height: 8rem;
+  }
+}
+.upload__video-description:focus {
+  outline-color: #0095ff;
+}
+.upload__video-description::-moz-placeholder {
+  font-family: "Avenir Next", Arial, sans-serif;
+  font-weight: 400;
+  color: #323232;
+  font-size: 1.2rem;
+  padding-left: 0.2rem;
+}
+.upload__video-description::placeholder {
+  font-family: "Avenir Next", Arial, sans-serif;
+  font-weight: 400;
+  color: #323232;
+  font-size: 1.2rem;
+  padding-left: 0.2rem;
+}
+@media (min-width: 1280px) {
+  .upload__video-description::-moz-placeholder {
+    font-size: 1rem;
+  }
+  .upload__video-description::placeholder {
+    font-size: 1rem;
+  }
+}
+.upload__video-button {
+  background-image: url("../../assets/images/publish.svg");
+  background-color: #0095ff;
+  background-repeat: no-repeat;
+  background-position: 1rem center;
+  background-size: 2rem;
+  width: 100%;
+  height: 3.6rem;
+  margin: 1.2rem 1rem 0 0;
+  border-radius: 0.25rem;
+  border-style: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: white;
+  line-height: 1rem;
+  font-family: "Avenir Next", Arial, sans-serif;
+  font-weight: 700;
+}
+.upload__video-button:hover {
+  background-color: #0065ad;
+}
+.upload__video-cancel-button {
+  margin: 1.2rem 1rem 0 0;
+  background-color: white;
+  border-radius: 0.25rem;
+  width: 100%;
+  height: 3.6rem;
+  border-style: none;
+  font-family: "Avenir Next", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #0095ff;
+  text-transform: uppercase;
+}
+.upload__video-cancel-button:hover {
+  color: #0065ad;
+}
+@media (min-width: 768px) {
+  .upload__button-wrap-tablet {
+    border-top: 0.15rem solid #e1e1e1;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+}
+@media (min-width: 768px) {
+  .upload__container-tablet {
+    border-top: 0.15rem solid #e1e1e1;
+  }
+}
+@media (min-width: 1280px) {
+  .upload__container-desktop {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .upload__button-container-tablet {
+    width: 14rem;
+  }
+}
+.upload__placeholder-value {
+  display: none;
+}/*# sourceMappingURL=uploadPage.css.map */

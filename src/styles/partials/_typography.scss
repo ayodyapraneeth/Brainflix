@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+}
+
+@mixin fontRegular {
+  font-family: "Avenir Next", Arial, sans-serif;
+  font-weight: 400;
+}
+@mixin fontBold {
+  font-family: "Avenir Next", Arial, sans-serif;
+  font-weight: 700;
+}

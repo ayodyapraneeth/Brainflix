@@ -1,0 +1,41 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/breakpoints" as *;
+
+.list {
+	&__image {
+		height: 7rem;
+		width: 12rem;
+		border-radius: 0.5rem;
+		background-color: $secondary-mercury;
+		margin-right: 1rem;
+		margin-bottom: 1rem;
+	}
+	&__header {
+		color: $primary-silver;
+		@include fontBold;
+		text-transform: uppercase;
+	}
+
+	&__details-tablet {
+		@include fontBold;
+		@include media-tablet {
+			font-size: 0.9rem;
+			color: $primary-black;
+		}
+	}
+	&__channel-name {
+		@include fontRegular;
+		color: $secondary-black;
+		line-height: 0;
+	}
+
+	&__container {
+		padding-left: 1rem;
+		padding-right: 2rem;
+	}
+
+	&__video-wrapper {
+		display: flex;
+	}
+}

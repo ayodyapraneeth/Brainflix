@@ -1,0 +1,443 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/breakpoints" as *;
+
+@mixin header {
+	display: flex;
+	justify-content: space-around;
+	padding: 1rem;
+	background-color: $primary-white;
+}
+
+@mixin header__wrapper {
+	width: 100%;
+	background-color: $primary-white;
+
+	@include media-tablet {
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	@include media-desktop {
+		display: flex;
+		justify-content: space-around;
+	}
+}
+
+@mixin header__logo-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 1rem;
+
+	@include media-tablet {
+		padding-bottom: 0;
+	}
+}
+
+@mixin header__logo {
+	width: 10rem;
+	height: 3.4375rem;
+	background-color: $primary-white;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	@include media-tablet {
+		width: 7.5rem;
+		height: 1.5625rem;
+		padding-bottom: 0;
+	}
+}
+
+@mixin header__content-tablet {
+	@include media-tablet {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		width: 68%;
+		margin-left: 5rem;
+	}
+
+	@include media-desktop {
+		display: flex;
+		align-items: center;
+		width: 50%;
+		justify-content: space-evenly;
+	}
+}
+
+@mixin header__search-container {
+	width: 85%;
+
+	@include media-tablet {
+		width: 15rem;
+	}
+}
+
+@mixin header__search {
+	background-image: url("../../assets/images/search.svg");
+	background-color: $secondary-alabaster;
+	background-repeat: no-repeat;
+	background-position: 1rem;
+	padding: 0.563rem 0.25rem 0.563rem 3.5rem;
+	background-size: 1.3rem;
+	width: 100%;
+	height: 3.2rem;
+	border: 2px solid $secondary-mercury;
+	background-color: $secondary-alabaster;
+	border-radius: 0.3rem;
+
+	&:focus {
+		outline-color: $primary-blue;
+	}
+
+	@include media-tablet {
+		height: 2.8rem;
+	}
+
+	&::placeholder {
+		@include fontRegular;
+		color: $secondary-black;
+		font-size: 1rem;
+		line-height: 1.125rem;
+		letter-spacing: 0.02rem;
+
+		@include media-tablet {
+			font-size: 0.9rem;
+			color: $primary-black;
+		}
+
+		@include media-desktop {
+			color: $secondary-black;
+		}
+	}
+}
+
+@mixin header__items-tablet {
+	@include media-tablet {
+		display: flex;
+	}
+}
+
+@mixin header__avatar {
+	background-image: url(../../assets/images/Mohan-muruge.jpg);
+	background-color: $primary-silver;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 50%;
+	height: 3.5rem;
+	width: 3.5rem;
+
+	@include media-tablet {
+		display: none;
+	}
+}
+
+@mixin header__upload-button {
+	background-image: url(../../assets/images/upload.svg);
+	background-color: $primary-blue;
+	background-repeat: no-repeat;
+	background-position: 1rem center;
+	background-size: 2rem;
+	width: 100%;
+	height: 3.6rem;
+	margin-top: 1rem;
+	border-radius: 0.25rem;
+	border-style: none;
+
+	&:hover {
+		background-color: $secondary-blue;
+	}
+
+	&--link {
+		@include fontBold;
+		color: $primary-white;
+		font-size: 1.1rem;
+		text-transform: uppercase;
+		line-height: 1rem;
+		text-decoration: none;
+	}
+
+	@include media-tablet {
+		width: 11rem;
+		height: 2.8rem;
+		font-size: 0.8rem;
+		background-size: 1.5rem;
+		margin: 0;
+	}
+}
+
+@mixin header__avatar-tablet {
+	@include media-tablet {
+		background-image: url(../../assets/images/Mohan-muruge.jpg);
+		background-color: $primary-silver;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-radius: 50%;
+		height: 3rem;
+		width: 3rem;
+	}
+}
+
+
+@mixin main__video-player {
+	width: 100%;
+	margin-top: 1rem;
+	background-color: $secondary-black;
+	@include media-tablet {
+	  padding: 0 4rem;
+	}
+	@include media-desktop {
+	  padding: 0 10rem;
+	}
+  }
+  
+  @mixin main__video-heading {
+	@include fontBold;
+	line-height: 2.3rem;
+	font-size: 2rem;
+	padding: 1rem 1rem 1.5rem 1rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	color: $primary-black;
+	border-bottom: 1px solid $secondary-mercury;
+	@include media-tablet {
+	  margin-bottom: 0;
+	  border-bottom: none;
+	}
+  }
+  
+  @mixin main__video-details {
+	display: flex;
+	padding-bottom: 1rem;
+	padding-left: 1rem;
+	align-items: center;
+	margin-right: 1rem;
+	margin-left: 1rem;
+	border-bottom: 1px solid $secondary-mercury;
+	@include media-tablet {
+	  justify-content: space-between;
+	  margin-right: 1rem;
+	  margin-left: 1rem;
+	  padding: 0;
+	}
+  }
+  
+  @mixin main__video-details-tablet {
+	@include media-tablet {
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-evenly;
+	  width: 16rem;
+	}
+  }
+  
+  @mixin main__views-icon {
+	height: 2rem;
+	width: 2.2rem;
+	padding-right: 0.5rem;
+	margin: 0;
+	@include media-tablet {
+	  padding: 0;
+	  margin: 0;
+	}
+  }
+  
+  @mixin main__video-stats {
+	@include fontRegular;
+	color: $primary-silver;
+  }
+  
+  @mixin main__video-date-align {
+	padding-top: 1rem;
+	@include media-tablet {
+	  padding: 0;
+	}
+  }
+
+  @mixin main__name-date-wrap {
+	display: flex;
+	justify-content: space-between;
+  }
+  
+  @mixin main__video-channel {
+	@include fontBold;
+	color: $primary-black;
+  }
+  
+  @mixin main__likes-icon {
+	height: 1.5rem;
+	width: 2.3rem;
+	padding-right: 0.5rem;
+	@include media-tablet {
+	  padding: 0;
+	  margin: 0;
+	}
+  }
+  
+  @mixin main__icon {
+	display: flex;
+	align-items: center;
+	@include media-tablet {
+	  margin-right: 2rem;
+	}
+  }
+  
+  @mixin main__icon-tablet {
+	padding-left: 10rem;
+	@include media-tablet {
+	  display: flex;
+	  align-items: center;
+	  padding: 0;
+	}
+  }
+  
+  @mixin main__icon-wrap {
+	@include media-tablet {
+	  display: flex;
+	  width: 16rem;
+	  justify-content: space-evenly;
+	}
+  }
+  
+  @mixin main__comment-section {
+	margin-left: 1rem;
+	margin-right: 1rem;
+	padding-bottom: 0.3rem;
+	@include media-tablet {
+	  font-size: 0.9rem;
+	}
+  }
+  
+  @mixin main__display-empty-photo {
+	width: 20%;
+	background-color: $secondary-mercury;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 2rem;
+	height: 3rem;
+	width: 3rem;
+	@include media-tablet {
+	  height: 2rem;
+	  width: 2rem;
+	}
+  }
+  
+  @mixin main__loaded-comment-wrap {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid $secondary-mercury;
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	@include media-tablet {
+	  justify-content: space-evenly;
+	  align-items: stretch;
+	}
+  }
+  
+  @mixin main__display-photo {
+	width: 20%;
+	background-image: url(../../assets/images/Mohan-muruge.jpg);
+	background-color: $secondary-mercury;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 2rem;
+	height: 3rem;
+	width: 3rem;
+	@include media-tablet {
+	  height: 2rem;
+	  width: 2rem;
+	  margin-top: 2rem;
+	  margin-left: 2rem;
+	}
+  }
+  
+  @mixin main__comment-heading {
+	@include fontBold;
+	color: $primary-silver;
+	font-size: 0.8125rem;
+	line-height: 1.125rem;
+	margin-bottom: 0.5rem;
+	text-transform: uppercase;
+	@include media-tablet {
+	  font-size: 0.7rem;
+	}
+  }
+  
+  @mixin main__comment-subheading {
+	@include fontBold;
+	padding-bottom: 1rem;
+	padding-left: 2rem;
+	@include media-tablet {
+	  border-top: none;
+	}
+  }
+  
+  @mixin main__comment-new {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-top: 1px solid $secondary-mercury;
+	border-bottom: 1px solid $secondary-mercury;
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	@include media-tablet {
+	  border-top: none;
+	}
+  }
+  
+  @mixin main__comment-name {
+	@include fontBold;
+	color: $secondary-black;
+	line-height: 0;
+	@include media-tablet {
+	  font-size: 0.9rem;
+	}
+  }
+  
+  @mixin main__comment-text-area {
+	width: 100%;
+	box-sizing: border-box;
+	height: 9.375rem;
+	padding: 0.625rem;
+	font-size: 1rem;
+	border: 0.1rem solid $secondary-mercury;
+	background-color: $secondary-alabaster;
+	border-radius: 0.25rem;
+	resize: none;
+	@include media-tablet {
+	  height: 3rem;
+	  width: 28rem;
+	}
+	&::placeholder {
+	  @include fontRegular;
+	  color: $secondary-black;
+	  font-size: 0.9rem;
+	  @include media-tablet {
+		font-size: 0.8rem;
+	  }
+	}
+	&:focus {
+	  outline-color: $primary-blue;
+	}
+  }
+  
+  @mixin main__comment-context {
+	width: 85%;
+	@include media-tablet {
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-evenly;
+	  width: 100%;
+	}
+  }
+  
+  @mixin main__comments {
+	@include fontRegular;
+	line-height: 1.5rem;
+  }
+  
+  @mixin main__comment-wrap {
+	width:85%;
+}
+  

@@ -1,0 +1,182 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/breakpoints" as *;
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  background-color: $primary-white;
+
+  &__wrapper {
+    width: 100%;
+    background-color: $primary-white;
+
+    @include media-tablet {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    @include media-desktop {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  &__logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+
+    @include media-tablet {
+      padding-bottom: 0;
+    }
+  }
+  &__logo {
+    width: 10rem;
+    height: 3.4375rem;
+    background-color: $primary-white;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include media-tablet {
+      width: 7.5rem;
+      height: 1.5625rem;
+      padding-bottom: 0;
+    }
+  }
+  &__content-tablet {
+    @include media-tablet {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 68%;
+      margin-left: 5rem;
+    }
+
+    @include media-desktop {
+      display: flex;
+      align-items: center;
+      width: 50%;
+      justify-content: space-evenly;
+    }
+  }
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include media-tablet {
+    }
+  }
+
+  &__search-container {
+    width: 85%;
+
+    @include media-tablet {
+      width: 15rem;
+    }
+  }
+
+  &__search {
+    background-image: url("../../assets/images/search.svg");
+    background-color: $secondary-alabaster;
+    background-repeat: no-repeat;
+    background-position: 1rem;
+    padding: 0.563rem 0.25rem 0.563rem 3.5rem;
+    background-size: 1.3rem;
+    width: 100%;
+    height: 3.2rem;
+    border: 2px solid $secondary-mercury;
+    background-color: $secondary-alabaster;
+    border-radius: 0.3rem;
+    &:focus {
+      outline-color: $primary-blue;
+    }
+
+    @include media-tablet {
+      height: 2.8rem;
+    }
+
+    &::placeholder {
+      @include fontRegular;
+      color: $secondary-black;
+      font-size: 1rem;
+      line-height: 1.125rem;
+      letter-spacing: 0.02rem;
+
+      @include media-tablet {
+        font-size: 0.9rem;
+        color: $primary-black;
+      }
+
+      @include media-desktop {
+        color: $secondary-black;
+      }
+    }
+  }
+
+  &__items-tablet {
+    @include media-tablet {
+      display: flex;
+    }
+  }
+
+  &__avatar {
+    background-image: url(../../assets/images/Mohan-muruge.jpg);
+    background-color: $primary-silver;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    height: 3.5rem;
+    width: 3.5rem;
+    @include media-tablet {
+      display: none;
+    }
+  }
+
+  &__upload-button {
+    background-image: url(../../assets/images/upload.svg);
+    background-color: $primary-blue;
+    background-repeat: no-repeat;
+    background-position: 1rem center;
+    background-size: 2rem;
+    width: 100%;
+    height: 3.6rem;
+    margin-top: 1rem;
+    border-radius: 0.25rem;
+    border-style: none;
+    &:hover {
+      background-color: $secondary-blue;
+    }
+
+    &--link {
+      @include fontBold;
+      color: $primary-white;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      line-height: 1rem;
+      text-decoration: none;
+    }
+
+    @include media-tablet {
+      width: 11rem;
+      height: 2.8rem;
+      font-size: 0.8rem;
+      background-size: 1.5rem;
+      margin: 0;
+    }
+  }
+
+  &__avatar-tablet {
+    @include media-tablet {
+      background-image: url(../../assets/images/Mohan-muruge.jpg);
+      background-color: $primary-silver;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 50%;
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+}

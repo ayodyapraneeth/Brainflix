@@ -1,0 +1,326 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/breakpoints" as *;
+
+.main {
+	&__video-player {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+
+		margin-top: 1rem;
+		background-color: $secondary-black;
+		@include media-tablet {
+			padding: 0 4rem;
+		}
+
+		@include media-desktop {
+			padding: 0 10rem;
+		}
+	}
+	&__video-heading {
+		@include fontBold;
+		line-height: 2.3rem;
+		font-size: 2rem;
+		padding: 1rem 1rem 1.5rem 1rem;
+		margin-left: 1rem;
+		margin-right: 1rem;
+		color: $primary-black;
+		border-bottom: 1px solid $secondary-mercury;
+		@include media-tablet {
+			margin-bottom: 0;
+			border-bottom: none;
+		}
+	}
+	&__video-details {
+		display: flex;
+		padding-bottom: 1rem;
+		padding-left: 1rem;
+		align-items: center;
+		margin-right: 1rem;
+		margin-left: 1rem;
+		border-bottom: 1px solid $secondary-mercury;
+		@include media-tablet {
+			justify-content: space-between;
+			margin-right: 1rem;
+			margin-left: 1rem;
+			padding: 0;
+		}
+	}
+	&__video-details-alignment {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		height: 6rem;
+		@include media-tablet {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-evenly;
+			width: 16rem;
+		}
+	}
+
+	&__video-player-aspect-ratio {
+		position: relative;
+		padding-bottom: 56.25%;
+		margin-bottom: 1rem;
+	}
+
+	&__views-icon {
+		height: 2rem;
+		width: 2.2rem;
+		padding-right: 0.5rem;
+		margin: 0;
+		@include media-tablet {
+			padding: 0;
+			margin: 0;
+		}
+	}
+	&__video-stats {
+		@include fontRegular;
+		color: $primary-silver;
+	}
+
+	&__video-date-align {
+		padding-top: 1rem;
+		@include media-tablet {
+			padding: 0;
+		}
+	}
+	&__video-channel {
+		@include fontBold;
+		color: $primary-black;
+	}
+
+	&__likes-icon {
+		height: 1.5rem;
+		width: 2.3rem;
+		padding-right: 0.5rem;
+		@include media-tablet {
+			padding: 0;
+			margin: 0;
+		}
+	}
+	&__icon {
+		display: flex;
+		align-items: center;
+		@include media-tablet {
+			margin-right: 2rem;
+		}
+	}
+	&__icon-tablet {
+		padding-left: 10rem;
+		@include media-tablet {
+			display: flex;
+			align-items: center;
+			padding: 0;
+		}
+	}
+
+	&__icon-wrap {
+		@include media-tablet {
+			display: flex;
+			width: 16rem;
+			justify-content: space-evenly;
+		}
+	}
+	&__comment-section {
+		margin-left: 1rem;
+		margin-right: 1rem;
+		padding-bottom: 0.3rem;
+		@include media-tablet {
+			font-size: 0.9rem;
+		}
+	}
+	&__display-empty-photo {
+		width: 20%;
+		background-color: $secondary-mercury;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-radius: 2rem;
+		height: 3rem;
+		width: 3rem;
+	}
+	&__loaded-comment-wrap {
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px solid $secondary-mercury;
+		padding-bottom: 1rem;
+		margin-bottom: 1rem;
+		@include media-desktop {
+			margin-right: -1rem;
+		}
+
+		@include media-tablet {
+			justify-content: space-evenly;
+			align-items: stretch;
+		}
+	}
+	&__display-photo {
+		background-image: url(../../assets/images/Mohan-muruge.jpg);
+		background-color: $secondary-mercury;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-radius: 50%;
+		height: 3rem;
+		width: 3rem;
+		@include media-tablet {
+			margin-top: 2rem;
+			margin-left: 2rem;
+		}
+	}
+	&__comment-heading {
+		@include fontBold;
+		color: $primary-silver;
+		font-size: 0.8125 rem;
+		line-height: 1.125rem;
+		margin-bottom: 0.5rem;
+		text-transform: uppercase;
+		@include media-tablet {
+			font-size: 0.7rem;
+		}
+	}
+	&__comment-subheading {
+		@include fontBold;
+		padding-bottom: 1rem;
+		padding-left: 2rem;
+		font-size: 1.2rem;
+
+		@include media-tablet {
+			border-top: none;
+		}
+	}
+	&__comment-new {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-top: 1px solid $secondary-mercury;
+		border-bottom: 1px solid $secondary-mercury;
+		padding-bottom: 1rem;
+		margin-bottom: 1rem;
+		
+		@include media-desktop {
+			margin-right: -1rem;
+		}
+		@include media-tablet {
+			border-top: none;
+		}
+	}
+	&__comment-name {
+		@include fontBold;
+		color: $secondary-black;
+		line-height: 0;
+		@include media-tablet {
+			font-size: 0.9rem;
+		}
+	}
+
+	&__comment-text-area {
+		width: 100%;
+		box-sizing: border-box;
+		height: 9.375rem;
+		padding: 0.625rem;
+		font-size: 1rem;
+		border: 0.1rem solid $secondary-mercury;
+		background-color: $secondary-alabaster;
+		border-radius: 0.25rem;
+		resize: none;
+		@include media-tablet {
+			height: 3rem;
+			width: 28rem;
+		}
+
+		&::placeholder {
+			@include fontRegular;
+			color: $secondary-black;
+			font-size: 0.9rem;
+			@include media-tablet {
+				font-size: 0.8rem;
+			}
+		}
+		&:focus {
+			outline-color: $primary-blue;
+		}
+	}
+	&__comment-context {
+		width: 85%;
+		@include media-tablet {
+			display: flex;
+			align-items: center;
+			justify-content: space-evenly;
+			width: 100%;
+		}
+	}
+	&__comments {
+		@include fontRegular;
+		line-height: 1.5rem;
+		margin-top: 0;
+	}
+
+	&__comment-wrap {
+		width: 85%;
+	}
+	&__name-date-wrap {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__button {
+		@include fontBold;
+		background-image: url("../../assets/images/add_comment.svg");
+		background-color: $primary-blue;
+		background-repeat: no-repeat;
+		background-position: 1rem center;
+		border-width: 0;
+		border-radius: 0.25rem;
+		height: 3rem;
+		width: 100%;
+		margin-top: 1rem;
+		&:hover {
+			background-color: $secondary-blue;
+		}
+
+		@include media-tablet {
+			height: 3rem;
+			width: 10rem;
+			background-size: 1rem;
+			margin-top: 2rem;
+		}
+	}
+
+	&__button-text {
+		@include fontBold;
+		font-size: 1rem;
+		color: $primary-white;
+		@include media-tablet {
+			height: 3rem;
+			font-size: 0.8rem;
+		}
+	}
+
+	&__video-description {
+		padding: 0rem 2rem 1rem 2rem;
+		@include fontRegular;
+		color: $secondary-black;
+		line-height: 1.4rem;
+		font-size: 0.99rem;
+	}
+	&__video-side-list {
+		@include media-desktop {
+			display: flex;
+		}
+	}
+	&__video-list-align {
+		@include media-desktop {
+			border-left: 1px solid $secondary-mercury;
+		}
+	}
+
+	&__content alignment{
+		margin-right: 1rem;
+	}
+}
